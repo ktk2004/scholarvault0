@@ -1,0 +1,109 @@
+You are a senior frontend web developer.
+
+IMPORTANT RULES (DO NOT BREAK):
+- Use ONLY plain HTML, CSS, and Vanilla JavaScript
+- NO React, NO Vue, NO Angular
+- NO TypeScript (.ts / .tsx)
+- NO Tailwind CSS
+- NO Node.js, NO npm, NO backend
+- NO build tools
+- Must run by opening index.html with Live Server or directly in browser
+- Must work on GitHub Pages
+
+━━━━━━━━━━━━━━━━━━━━━━
+🎯 WEBSITE GOAL
+━━━━━━━━━━━━━━━━━━━━━━
+Create a modern, professional frontend website called:
+
+“ScholarVault – Previous Years Question Paper Portal”
+
+Admin can upload question papers.
+Users can login and view/download them.
+
+This is a FRONTEND-ONLY DEMO website.
+
+━━━━━━━━━━━━━━━━━━━━━━
+👥 USER ROLES (FRONTEND SIMULATION)
+━━━━━━━━━━━━━━━━━━━━━━
+
+ADMIN:
+- Admin login credentials hardcoded in JavaScript
+- Admin dashboard page
+- Upload PDF/DOC files
+- Add subject, year, semester, description
+- Data stored in browser LocalStorage
+- Delete uploaded papers
+- Logout button
+
+USERS:
+- User signup & login
+- View uploaded question papers
+- Search & filter by subject/year
+- Download papers
+- View-only access
+
+━━━━━━━━━━━━━━━━━━━━━━
+📄 REQUIRED FILES
+━━━━━━━━━━━━━━━━━━━━━━
+Generate COMPLETE code for these files only:
+
+- index.html (Landing page)
+- login.html
+- register.html
+- admin.html
+- dashboard.html
+- style.css
+- script.js
+
+NO other files.
+
+━━━━━━━━━━━━━━━━━━━━━━
+🎨 DESIGN REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━
+
+- Modern academic & premium look
+- Card-based layout
+- Smooth animations & transitions
+- Responsive (mobile & desktop)
+- Sticky navbar
+- Hover effects
+- Google Fonts (Inter / Libre Baskerville)
+- CSS variables for theme
+- Optional dark mode (pure CSS + JS)
+
+━━━━━━━━━━━━━━━━━━━━━━
+⚙️ FUNCTIONAL REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━
+
+- Authentication using LocalStorage
+- Role-based access control
+- Session handling
+- File upload using FileReader (Base64)
+- File list rendering dynamically
+- Confirmation modal before delete
+- Fully functional buttons (no dummy buttons)
+- Error handling messages
+- Logout clears session
+
+━━━━━━━━━━━━━━━━━━━━━━
+❌ STRICTLY FORBIDDEN
+━━━━━━━━━━━━━━━━━━━━━━
+
+- React / JSX / TSX
+- Tailwind / Bootstrap
+- @apply / @layer / @theme
+- import/export modules
+- crypto, fs, backend APIs
+- Absolute paths starting with /
+
+━━━━━━━━━━━━━━━━━━━━━━
+📤 OUTPUT FORMAT
+━━━━━━━━━━━━━━━━━━━━━━
+
+- Provide full code for each file separately
+- Use plain HTML <script> and <link> tags
+- Comment code clearly
+- Ensure website loads without blank screen
+
+REMEMBER:
+This website MUST work by simply opening index.html.

@@ -1,0 +1,121 @@
+You are a senior frontend web developer and UI/UX designer.
+
+STRICT RULES (DO NOT BREAK):
+- Use ONLY plain HTML, CSS, and Vanilla JavaScript
+- NO React, Vue, Angular
+- NO TypeScript (.ts / .tsx)
+- NO Tailwind, Bootstrap, or CSS frameworks
+- NO Node.js, npm, backend, or build tools
+- NO <script type="module"> or ES module imports
+- NO <div id="root"> or framework entry points
+- Use ONLY browser APIs (DOM, LocalStorage, FileReader)
+- Use relative paths only (./style.css, ./script.js)
+- Website must run by opening index.html with Live Server
+- Must work on GitHub Pages
+
+━━━━━━━━━━━━━━━━━━━━━━
+🎯 PROJECT GOAL
+━━━━━━━━━━━━━━━━━━━━━━
+Build a modern, professional, frontend-only academic website called:
+
+“ScholarVault – Previous Years Question Paper Portal”
+
+Admin uploads question papers.
+Students login and view/download them.
+
+This is a FRONTEND DEMO website using browser storage.
+
+━━━━━━━━━━━━━━━━━━━━━━
+👥 USER ROLES (SIMULATED)
+━━━━━━━━━━━━━━━━━━━━━━
+
+ADMIN:
+- Admin credentials hardcoded in JavaScript
+- Admin dashboard page
+- Upload PDF/DOC files
+- Add subject, year, semester, description
+- Store data using LocalStorage (Base64 for files)
+- View, manage, and delete papers
+- Confirmation before delete
+- Logout clears session
+
+STUDENTS:
+- User registration & login
+- View uploaded question papers
+- Search and filter by subject/year
+- Download papers
+- Read-only access
+
+━━━━━━━━━━━━━━━━━━━━━━
+📄 REQUIRED FILES ONLY
+━━━━━━━━━━━━━━━━━━━━━━
+Generate COMPLETE code for:
+
+1. index.html (Hero landing page)
+2. style.css
+3. script.js
+4. login.html
+5. register.html
+6. admin.html
+7. dashboard.html
+
+NO extra files.
+
+━━━━━━━━━━━━━━━━━━━━━━
+🎨 UI / UX REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━
+
+Design must feel:
+- Academic
+- Clean
+- Premium
+- Modern
+
+Include:
+- Hero section with title, subtitle, CTA
+- Sticky navigation bar
+- Card-based layout (no tables)
+- Soft shadows, rounded corners
+- Smooth hover effects
+- Fade-in animations on load
+- Empty-state design when no data exists
+- Footer with copyright
+- Optional dark mode toggle
+
+Fonts:
+- Headings → Serif (Libre Baskerville)
+- Body → Sans-serif (Inter)
+
+━━━━━━━━━━━━━━━━━━━━━━
+⚙️ FUNCTIONAL REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━
+
+- Authentication via LocalStorage
+- Role-based access control
+- Session persistence
+- File upload preview
+- Dynamic rendering of papers
+- Fully functional buttons (no placeholders)
+- Clear error messages
+- Mobile-first responsive design
+
+━━━━━━━━━━━━━━━━━━━━━━
+❌ STRICTLY FORBIDDEN
+━━━━━━━━━━━━━━━━━━━━━━
+
+- JSX / TSX
+- Tailwind directives (@apply, @layer, @theme)
+- Backend APIs or databases
+- Absolute paths starting with /
+
+━━━━━━━━━━━━━━━━━━━━━━
+📤 OUTPUT INSTRUCTIONS
+━━━━━━━━━━━━━━━━━━━━━━
+
+- Provide full code for each file separately
+- Use only <link> and <script> tags
+- Comment code clearly
+- Ensure website loads without white screen
+
+REMEMBER:
+This website MUST work by simply opening index.html.

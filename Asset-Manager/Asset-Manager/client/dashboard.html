@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard - ScholarVault</title>
+        <meta property="og:title" content="Dashboard - ScholarVault" />
+        <meta
+            property="og:description"
+            content="Browse and download question papers from your personalized dashboard"
+        />
+        <meta
+            property="og:image"
+            content="https://replit.com/public/images/opengraph.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@replit" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <a
+                    href="./index.html"
+                    class="logo"
+                    data-testid="logo-dashboard"
+                >
+                    <span class="logo-icon">📚</span>
+                    Scholar<span>Vault</span>
+                </a>
+                <div class="nav-links">
+                    <span
+                        id="nav-user"
+                        class="text-muted"
+                        data-testid="nav-user-dashboard"
+                    ></span>
+                    <button
+                        id="theme-toggle"
+                        class="theme-toggle"
+                        data-testid="button-theme-toggle"
+                        title="Toggle dark/light mode"
+                    ></button>
+                    <button
+                        onclick="handleLogout()"
+                        class="btn btn-outline btn-sm"
+                        data-testid="button-logout-dashboard"
+                    >
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <div class="dashboard-header">
+                <h1 data-testid="dashboard-title">📚 Question Paper Archive</h1>
+                <p class="text-muted">
+                    Browse, search, and download papers from your personalized
+                    collection
+                </p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="form-group" style="margin: 0">
+                    <label class="form-label">🔍 Search Papers</label>
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="form-input"
+                        placeholder="Search by subject..."
+                        data-testid="input-search"
+                    />
+                </div>
+
+                <div class="form-group" style="margin: 0">
+                    <label class="form-label">📅 Filter by Year</label>
+                    <select
+                        id="year-filter"
+                        class="form-select"
+                        data-testid="select-year-filter"
+                    >
+                        <option value="">All Years</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div id="papers-grid" class="papers-grid" data-testid="papers-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <footer class="footer" style="margin-top: 2rem">
+            <div class="container">
+                <p style="margin-bottom: 0.5rem">
+                    🎓 <strong>ScholarVault</strong> - Your Gateway to Academic
+                    Excellence
+                </p>
+                <small
+                    >&copy; 2024 ScholarVault. All rights reserved. Download
+                    materials and prepare well.</small
+                >
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

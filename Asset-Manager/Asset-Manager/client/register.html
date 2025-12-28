@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ScholarVault</title>
+    <meta property="og:title" content="Register - ScholarVault" />
+    <meta property="og:description" content="Create your account to start accessing question papers on ScholarVault" />
+    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@replit" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo" data-testid="logo-register">
+                <span class="logo-icon">📚</span>
+                Scholar<span>Vault</span>
+            </a>
+            <div class="nav-links">
+                <button id="theme-toggle" class="theme-toggle" data-testid="button-theme-toggle" title="Toggle dark/light mode"></button>
+                <a href="./login.html" class="nav-link" data-testid="link-login-from-register">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p class="text-muted">Join the academic community and unlock 500+ question papers</p>
+            </div>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label class="form-label" for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" class="form-input" required placeholder="John Doe" data-testid="input-fullname">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-input" required placeholder="Choose a unique username" data-testid="input-username-reg">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-input" required placeholder="••••••••" data-testid="input-password-reg">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-input" required placeholder="••••••••" data-testid="input-confirm-password">
+                </div>
+
+                <button type="submit" class="btn btn-accent" style="width: 100%;" data-testid="button-register">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="./login.html" data-testid="link-login-footer">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

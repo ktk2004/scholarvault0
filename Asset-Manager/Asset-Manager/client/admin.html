@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - ScholarVault</title>
+    <meta property="og:title" content="Admin Portal - ScholarVault" />
+    <meta property="og:description" content="Manage and upload question papers on ScholarVault" />
+    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@replit" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo" data-testid="logo-admin">
+                <span class="logo-icon">📚</span>
+                Scholar<span>Vault</span> <small style="font-size: 0.7rem; margin-left: 0.5rem; opacity: 0.7;">⚙️ ADMIN</small>
+            </a>
+            <div class="nav-links">
+                <span id="nav-user" class="text-muted" data-testid="nav-user-admin"></span>
+                <button id="theme-toggle" class="theme-toggle" data-testid="button-theme-toggle" title="Toggle dark/light mode"></button>
+                <button onclick="handleLogout()" class="btn btn-outline btn-sm" data-testid="button-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="dashboard-header">
+            <h1 data-testid="admin-title">📚 Upload Question Paper</h1>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+            
+            <!-- Upload Form -->
+            <div class="auth-card" style="max-width: 100%; margin: 0; animation: none;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">New Paper</h3>
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label class="form-label">Subject Name *</label>
+                        <input type="text" name="subject" class="form-input" required placeholder="e.g. Data Structures" data-testid="input-subject">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label class="form-label">Year *</label>
+                            <input type="number" name="year" class="form-input" required min="2000" max="2025" value="2024" data-testid="input-year">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Semester *</label>
+                            <select name="semester" class="form-select" required data-testid="select-semester">
+                                <option value="1">Sem 1</option>
+                                <option value="2">Sem 2</option>
+                                <option value="3">Sem 3</option>
+                                <option value="4">Sem 4</option>
+                                <option value="5">Sem 5</option>
+                                <option value="6">Sem 6</option>
+                                <option value="7">Sem 7</option>
+                                <option value="8">Sem 8</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea name="description" class="form-textarea" placeholder="Brief details about the paper..." data-testid="textarea-description"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Paper File (PDF/DOC) *</label>
+                        <input type="file" id="file-upload" class="form-input" accept=".pdf,.doc,.docx" required data-testid="input-file">
+                        <small class="text-muted" style="display: block; margin-top: 0.5rem;">Max file size: 5MB</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 1rem;" data-testid="button-upload">📤 Upload Paper</button>
+                </form>
+            </div>
+
+            <!-- Uploaded List -->
+            <div>
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Uploaded Papers</h3>
+                <div id="admin-papers-list" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 2rem;">
+        <div class="container">
+            <p style="margin-bottom: 0.5rem;">🎓 <strong>ScholarVault</strong> Admin Panel</p>
+            <small>&copy; 2024 ScholarVault. Manage and organize your academic resources.</small>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

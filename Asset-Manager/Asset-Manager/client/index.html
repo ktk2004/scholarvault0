@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarVault - Question Paper Portal</title>
+    <meta property="og:title" content="ScholarVault - Question Paper Portal" />
+    <meta property="og:description" content="Access previous years question papers. A premium archive for academic excellence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@replit" />
+    <meta name="twitter:title" content="ScholarVault - Question Paper Portal" />
+    <meta name="twitter:description" content="Access previous years question papers. A premium archive for academic excellence." />
+    <meta name="twitter:image" content="https://replit.com/public/images/opengraph.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo" data-testid="logo-home">
+                <span class="logo-icon">📚</span>
+                Scholar<span>Vault</span>
+            </a>
+            <div class="nav-links">
+                <a href="./index.html" class="nav-link active" data-testid="link-home">Home</a>
+                <button id="theme-toggle" class="theme-toggle" data-testid="button-theme-toggle" title="Toggle dark/light mode"></button>
+                <a href="./login.html" class="btn btn-outline btn-sm" data-testid="link-login">Login</a>
+                <a href="./register.html" class="btn btn-primary btn-sm" data-testid="link-register">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero">
+        <div class="container">
+            <h1 data-testid="hero-title">Access Past Wisdom,<br>Ace Your Future.</h1>
+            <p data-testid="hero-subtitle">The premium archive for previous years' question papers. Organized, accessible, and designed for high achievers.</p>
+            
+            <div class="hero-buttons">
+                <a href="./register.html" class="btn btn-accent" data-testid="button-signup">Create Student Account</a>
+                <a href="./login.html" class="btn btn-outline" data-testid="button-admin-login">Admin Login</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section class="container" style="padding: 4rem 1.5rem;">
+        <div class="dashboard-header text-center" style="display: block;">
+            <h2 class="mb-2">Why ScholarVault?</h2>
+            <p class="text-muted">Built for academic excellence with 5+ years of question papers.</p>
+        </div>
+
+        <div class="papers-grid">
+            <div class="paper-card" style="padding: 2rem; text-align: center; border: 1px solid var(--border);">
+                <h3 class="mb-1">📚 Easy Access</h3>
+                <p class="text-muted">Download papers instantly without ads or interruptions. All materials are verified and organized.</p>
+            </div>
+            <div class="paper-card" style="padding: 2rem; text-align: center; border: 1px solid var(--border);">
+                <h3 class="mb-1">🔍 Smart Search</h3>
+                <p class="text-muted">Filter by year, semester, and subject for quick retrieval. Find exactly what you need in seconds.</p>
+            </div>
+            <div class="paper-card" style="padding: 2rem; text-align: center; border: 1px solid var(--border);">
+                <h3 class="mb-1">🔒 Secure Platform</h3>
+                <p class="text-muted">Role-based access ensures integrity of academic material. Your study data is safe with us.</p>
+            </div>
+        </div>
+
+        <!-- Sample Papers Preview -->
+        <div style="margin-top: 4rem;">
+            <h2 class="mb-2 text-center">📄 Sample Papers Available</h2>
+            <p class="text-center text-muted" style="margin-bottom: 2rem;">Explore our curated collection of previous years' exam papers</p>
+            <div class="papers-grid" id="sample-papers-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p style="margin-bottom: 0.5rem;">🎓 <strong>ScholarVault</strong> - Your Gateway to Academic Excellence</p>
+            <small>&copy; 2024 ScholarVault. All rights reserved. Your trusted question paper portal.</small>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+    <script>
+        // Show sample papers on home page
+        document.addEventListener('DOMContentLoaded', () => {
+            const sampleGrid = document.getElementById('sample-papers-grid');
+            if (sampleGrid && typeof SAMPLE_PAPERS !== 'undefined') {
+                const papers = [
+                    SAMPLE_PAPERS[0],
+                    SAMPLE_PAPERS[1],
+                    SAMPLE_PAPERS[2]
+                ];
+                
+                sampleGrid.innerHTML = papers.map((paper, idx) => `
+                    <div class="paper-card" style="animation-delay: ${idx * 0.1}s;">
+                        <div class="paper-header">
+                            <div class="paper-subject">${paper.title}</div>
+                            <div class="paper-meta">
+                                <span>${paper.year}</span>
+                                <span>•</span>
+                                <span>Sem ${paper.semester}</span>
+                            </div>
+                        </div>
+                        <div class="paper-body">
+                            <p class="paper-desc">${paper.description}</p>
+                            <small class="text-muted">📅 ${formatDate(paper.uploadedAt)}</small>
+                        </div>
+                        <div class="paper-footer">
+                            <span class="text-muted" style="font-size: 0.85rem;">📄 ${paper.fileName}</span>
+                            <a href="./login.html" class="btn btn-sm btn-primary">View</a>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
+</body>
+</html>
